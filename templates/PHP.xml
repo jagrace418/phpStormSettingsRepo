@@ -1,6 +1,5 @@
 <templateSet group="PHP">
-  <template name="testclass" value="use Tests\TestCase;&#10;use Illuminate\Foundation\Testing\DatabaseMigrations;&#10;&#10;class $CLASS$ extends TestCase&#10;{&#10;    use DatabaseMigrations;&#10;&#10;    public function test_$METHOD$(){&#10;        $END$&#10;    }&#10;}&#10;" description="A Laravel test class" toReformat="true" toShortenFQNames="true">
-    <variable name="CLASS" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+  <template name="laratest" value="public function test_$METHOD$(){&#10;    $END$&#10;}" description="A Laravel test class" toReformat="true" toShortenFQNames="true">
     <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
