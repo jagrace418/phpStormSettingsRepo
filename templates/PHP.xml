@@ -11,4 +11,9 @@
       <option name="PHP" value="true" />
     </context>
   </template>
+  <template name="dusk-browse" value="$this-&gt;browse(function (Browser $browser) {&#10;    $END$&#10;});" description="Dusk browse function template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
