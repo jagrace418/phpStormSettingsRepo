@@ -1,12 +1,12 @@
 <templateSet group="Blade">
-  <template name="form-text" value="&lt;div class=&quot;form-group&quot;&gt;&#10;&#9;&lt;label for=&quot;$NAME$&quot;&gt;$UPPERNAME$:&lt;/label&gt;&#10;&#9;&lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;$NAME$&quot; id=&quot;$NAME$&quot; required&gt;&#10;&lt;/div&gt;&#10;$END$" description="Form group for text input" toReformat="true" toShortenFQNames="true">
+  <template name="form-text" value="&lt;div class=&quot;form-group&quot;&gt;&#10;&#9;&lt;label for=&quot;$NAME$&quot;&gt;$UPPERNAME$&lt;/label&gt;&#10;&#9;&lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;$NAME$&quot; id=&quot;$NAME$&quot; required&gt;&#10;&lt;/div&gt;&#10;$END$" description="Form group for text input" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="UPPERNAME" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="OTHER" value="true" />
     </context>
   </template>
-  <template name="form-textarea" value="&lt;div class=&quot;form-group&quot;&gt;&#10;&#9;&lt;label for=&quot;$NAME$&quot;&gt;$UPPERNAME$:&lt;/label&gt;&#10;&#9;&lt;textarea name=&quot;$NAME$&quot; id=&quot;$NAME$&quot; cols=&quot;30&quot; rows=&quot;10&quot; required&gt;&lt;/textarea&gt;&#10;&lt;/div&gt;&#10;$END$" description="Form group text area" toReformat="true" toShortenFQNames="true">
+  <template name="form-textarea" value="&lt;div class=&quot;form-group&quot;&gt;&#10;&#9;&lt;label for=&quot;$NAME$&quot;&gt;$UPPERNAME$&lt;/label&gt;&#10;&#9;&lt;textarea name=&quot;$NAME$&quot; id=&quot;$NAME$&quot; cols=&quot;30&quot; rows=&quot;10&quot; required&gt;&lt;/textarea&gt;&#10;&lt;/div&gt;&#10;$END$" description="Form group text area" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="UPPERNAME" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
     <context>
@@ -19,9 +19,23 @@
       <option name="OTHER" value="true" />
     </context>
   </template>
-  <template name="tw-form-text" value="&lt;div class=&quot;mb-4&quot;&gt;&#10;&#9;&lt;label class=&quot;block text-gray-700 text-sm font-bold mb-2&quot; for=&quot;$NAME$&quot;&gt;&#10;&#9;&#9;$UPPERNAME$:&#10;&#9;&lt;/label&gt;&#10;&#9;&lt;input class=&quot;shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline&quot;&#10;&#9;    type=&quot;text&quot; name=&quot;$NAME$&quot; id=&quot;$NAME$&quot; placeholder=&quot;$UPPERNAME$&quot; required&gt;&#10;&lt;/div&gt;" description="Form text input with tailwind" toReformat="true" toShortenFQNames="true">
+  <template name="tw-form-text" value="&lt;div class=&quot;mb-4&quot;&gt;&#10;&#9;&lt;label class=&quot;block text-gray-700 text-sm font-bold mb-2&quot; for=&quot;$NAME$&quot;&gt;&#10;&#9;&#9;$UPPERNAME$&#10;&#9;&lt;/label&gt;&#10;&#9;&lt;input class=&quot;shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline&quot;&#10;&#9;    type=&quot;text&quot; name=&quot;$NAME$&quot; id=&quot;$NAME$&quot; placeholder=&quot;$UPPERNAME$&quot; required&gt;&#10;&lt;/div&gt;" description="Form text input with tailwind" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="UPPERNAME" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="tw-form-checkbox" value="&lt;div class=&quot;mb-4&quot;&gt;&#10;&#9;&lt;input class=&quot;leading-tight mr-2&quot; type=&quot;checkbox&quot; name=&quot;$NAME$&quot; id=&quot;$NAME$&quot;&gt;&#10;&#9;&lt;label class=&quot;block text-gray-500 text-sm font-bold mb-2&quot; for=&quot;$NAME$&quot;&gt;&#10;&#9;&#9;$UPPERNAME$&#10;&#9;&lt;/label&gt;&#10;&#9;&lt;span class=&quot;text-sm&quot;&gt;&#10;&#9;    $TEXT$&#10;&#9;&lt;/span&gt;&#10;&lt;/div&gt;" description="Checkbox built in tailwind" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="UPPERNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="form-error" value="@error('$NAME$')&#10;&lt;span class=&quot;invalid-feedback&quot; role=&quot;alert&quot;&gt;&#10;    &lt;strong&gt;{{ $message }}&lt;/strong&gt;&#10;&lt;/span&gt;&#10;@enderror" description="Template for form errors" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="OTHER" value="true" />
     </context>
